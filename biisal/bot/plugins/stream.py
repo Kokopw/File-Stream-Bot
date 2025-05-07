@@ -41,11 +41,12 @@ msg_text ="""
 <b>⚡ ʏᴏᴜʀ ʟɪɴᴋ ʜᴀꜱ ʙᴇᴇɴ ɢᴇɴᴇʀᴀᴛᴇᴅ!</b>
 
 <b>📄 ꜰɪʟᴇ ɴᴀᴍᴇ :</b> <code>{}</code>
+
 <b>📦 ꜰɪʟᴇ ꜱɪᴢᴇ :</b> <code>{}</code>
+
 <b>⏳ ᴠᴀʟɪᴅɪᴛʏ :</b> <i>6 ʜᴏᴜʀꜱ ᴏɴʟʏ</i>
 
-<b>✨ ʙᴏᴛ ʙʏ :</b> <i>ᴄʜᴀʀʟɪᴇ</i>
-<a href='https://t.me/CharlieWatson1'>@CharlieWatson1</a>"""
+<b>✨ ʙᴏᴛ ʙʏ :</b> <a href='https://t.me/CharlieWatson1'>ᴄʜᴀʀʟɪᴇ (@CharlieWatson1)</a>"""
 
 @StreamBot.on_message((filters.private) & (filters.document | filters.video | filters.audio | filters.photo) , group=4)
 async def private_receive_handler(c: Client, m: Message):
