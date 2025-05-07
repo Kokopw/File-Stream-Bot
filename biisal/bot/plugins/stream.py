@@ -45,8 +45,8 @@ msg_text ="""
 <b>⏳ ᴠᴀʟɪᴅɪᴛʏ :</b> <i>6 ʜᴏᴜʀꜱ ᴏɴʟʏ</i>
 
 <b>✨ ʙᴏᴛ ʙʏ :</b> <i>ᴄʜᴀʀʟɪᴇ</i>
-<a href='https://t.me/CharlieWatson1'>@CharlieWatson1</a>
-"""
+<a href='https://t.me/CharlieWatson1'>@CharlieWatson1</a>"""
+
 @StreamBot.on_message((filters.private) & (filters.document | filters.video | filters.audio | filters.photo) , group=4)
 async def private_receive_handler(c: Client, m: Message):
     if not await db.is_user_exist(m.from_user.id):
