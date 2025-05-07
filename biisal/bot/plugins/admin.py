@@ -25,11 +25,11 @@ async def sts(c: Client, m: Message):
         await m.reply_text(text=f"Total Users in DB: {total_users}", quote=True)
         
         
-@StreamBot.on_message(filters.command("broadcast") & filters.private  & filters.user(list(Var.OWNER_ID)))
+@StreamBot.on_message(filters.command("broadcast") & filters.private & filters.user(list(Var.OWNER_ID)))
 async def broadcast_(c, m):
-    user_id=m.from_user.id
+    user_id = m.from_user.id
     out = await m.reply_text(
-            text=f"Broadcast initiated! You will be notified with log file when all the users are notified."
+        text=f"Broadcast initiated! You will be notified with log file when all the users are notified."
     )
     all_users = await db.get_all_users()
     broadcast_msg = m.reply_to_message
@@ -50,10 +50,12 @@ async def broadcast_(c, m):
     )
     async with aiofiles.open('broadcast.txt', 'w') as broadcast_log_file:
         async for user in all_users:
-            sts, msg = await send_msg(
-                user_id=int(user['id']),
-                message=broadcast_msg
-            )
+            try:
+                await broadcast_msg.copy(chat_id=int(user['id']))
+                sts, msg = 200, None
+            except Exception as e:
+                sts, msg = 500, f"{user['id']} : {e}\n"
+
             if msg is not None:
                 await broadcast_log_file.write(msg)
             if sts == 200:
