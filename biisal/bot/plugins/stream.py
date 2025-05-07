@@ -40,8 +40,8 @@ pass_db = Database(Var.DATABASE_URL, "ag_passwords")
 msg_text ="""
 <b>⚡ ʏᴏᴜʀ ʟɪɴᴋ ʜᴀꜱ ʙᴇᴇɴ ɢᴇɴᴇʀᴀᴛᴇᴅ!</b>
 
-<b>📄 ꜰɪʟᴇ ɴᴀᴍᴇ :</b> <code>{filename}</code>
-<b>📦 ꜰɪʟᴇ ꜱɪᴢᴇ :</b> <code>{filesize}</code>
+<b>📄 ꜰɪʟᴇ ɴᴀᴍᴇ :</b> <code>{}</code>
+<b>📦 ꜰɪʟᴇ ꜱɪᴢᴇ :</b> <code>{}</code>
 <b>⏳ ᴠᴀʟɪᴅɪᴛʏ :</b> <i>6 ʜᴏᴜʀꜱ ᴏɴʟʏ</i>
 
 <b>✨ ʙᴏᴛ ʙʏ :</b> <i>ᴄʜᴀʀʟɪᴇ</i>
