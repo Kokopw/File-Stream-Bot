@@ -117,26 +117,22 @@ async def help_cd(b, m):
             )
              return
         except Exception:
-            await b.send_message(
-                chat_id=m.chat.id,
-                text="ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ ᴄᴏɴᴛᴀᴄᴛ [ᴏᴡɴᴇʀ](https://telegram.me/CharlieWatson1).",
-                disable_web_page_preview=True)
-            return
-    await StreamBot.send_photo(
-    chat_id=m.chat.id,
-    photo=random.choice(Var.PICS),
-    caption="""<b>You Don't Need Many Commands To Use This Bot 😅.
+        await StreamBot.send_photo(
+            chat_id=m.chat.id,
+            photo=random.choice(Var.PICS),
+            caption="""<b>You Don't Need Many Commands To Use This Bot 😅.
 
 Just Send Me Files And I Will Give You Direct Download & Streaming Link.
 
 Also You Can Use Me In Your Channel..Just Add Me And Make Me Admin And See My Power 🔥</b>""",
-    reply_markup = InlineKeyboardMarkup(
-    [
-        [InlineKeyboardButton("💥  ᴅᴏɴᴀᴛᴇ", callback_data="donate")],
-        [InlineKeyboardButton("✗ ᴄʟᴏsᴇ ✗", callback_data="close")]
-    ]
+    reply_markup=InlineKeyboardMarkup(
+        [
+            [InlineKeyboardButton("💥  ᴅᴏɴᴀᴛᴇ", callback_data="donate")],
+            [InlineKeyboardButton("✗ ᴄʟᴏsᴇ ✗", callback_data="close")]
+        ]
+    )
 )
-
+            
 @StreamBot.on_message(filters.command('ban') & filters.user(Var.OWNER_ID))
 async def do_ban(bot ,  message):
     userid = message.text.split(" ", 2)[1] if len(message.text.split(" ", 1)) > 1 else None
