@@ -117,7 +117,7 @@ async def help_cd(b, m):
             )
              return
         except Exception:
-        await StreamBot.send_photo(
+            await StreamBot.send_photo(
             chat_id=m.chat.id,
             photo=random.choice(Var.PICS),
             caption="""<b>You Don't Need Many Commands To Use This Bot 😅.
