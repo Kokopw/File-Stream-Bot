@@ -38,16 +38,15 @@ pass_dict = {}
 pass_db = Database(Var.DATABASE_URL, "ag_passwords")
 
 msg_text ="""
-<b>ʏᴏᴜʀ ʟɪɴᴋ ɪs ɢᴇɴᴇʀᴀᴛᴇᴅ...⚡</b>
+<b>⚡ ʏᴏᴜʀ ʟɪɴᴋ ʜᴀꜱ ʙᴇᴇɴ ɢᴇɴᴇʀᴀᴛᴇᴅ!</b>
 
-<b>📧 ꜰɪʟᴇ ɴᴀᴍᴇ :- </b> <i>{}</i>
+<b>📄 ꜰɪʟᴇ ɴᴀᴍᴇ :</b> <code>{filename}</code>
+<b>📦 ꜰɪʟᴇ ꜱɪᴢᴇ :</b> <code>{filesize}</code>
+<b>⏳ ᴠᴀʟɪᴅɪᴛʏ :</b> <i>6 ʜᴏᴜʀꜱ ᴏɴʟʏ</i>
 
-<b>📦 ꜰɪʟᴇ sɪᴢᴇ :- </b> <i>{}</i>
-
-<b>⚠️ ᴛʜɪꜱ ʟɪɴᴋ ᴡɪʟʟ ᴇxᴘɪʀᴇ ᴀꜰᴛᴇʀ 𝟼 ʜᴏᴜʀꜱ</b>
-
-<b>❇️ ʙʏ : @TechifyBots</b>"""
-
+<b>✨ ʙᴏᴛ ʙʏ :</b> <i>ᴄʜᴀʀʟɪᴇ</i>
+<a href='https://t.me/CharlieWatson1'>@CharlieWatson1</a>
+"""
 @StreamBot.on_message((filters.private) & (filters.document | filters.video | filters.audio | filters.photo) , group=4)
 async def private_receive_handler(c: Client, m: Message):
     if not await db.is_user_exist(m.from_user.id):
@@ -62,7 +61,7 @@ async def private_receive_handler(c: Client, m: Message):
             if user.status == "kicked":
                 await c.send_message(
                     chat_id=m.chat.id,
-                    text="You are banned!\n\n  Contact Developer [Rahul](https://telegram.me/CallOwnerBot) he will help you.",
+                    text="You are banned!\n\n  Contact Developer [ᴄʜᴀʀʟɪᴇ](https://t.me/CharlieWatson1) he will help you.",
                     disable_web_page_preview=True
                 )
                 return 
@@ -84,7 +83,7 @@ async def private_receive_handler(c: Client, m: Message):
             await m.reply_text(e)
             await c.send_message(
                 chat_id=m.chat.id,
-                text="sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [ʙᴏss](https://telegram.me/CallOwnerBot)",
+                text="sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [ʙᴏss](https://telegram.me/CharlieWatson1)",
                 disable_web_page_preview=True
             )
             return
