@@ -2,7 +2,7 @@ import aiohttp
 import asyncio
 import os
 
-URL = os.getenv("PING_URL", "https://your-bot-name.koyeb.app")  # <-- yahan aapka actual bot URL daalein
+URL = os.getenv("PING_URL", "https://expected-theadora-charliebots-07828f52.koyeb.app/")  # <-- yahan aapka actual bot URL daalein
 
 async def keep_awake():
     while True:
