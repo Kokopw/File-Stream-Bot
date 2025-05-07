@@ -18,7 +18,7 @@ class Var(object):
     API_ID = int(getenv('API_ID', '26340508'))
     API_HASH = str(getenv('API_HASH', 'e387e32ca3b2474492dc698928c4e501'))
     BOT_TOKEN = str(getenv('BOT_TOKEN' , ''))
-    PICS = (environ.get('PICS', 'https://envs.sh/jUp.jpg')).split()
+    PICS = (environ.get('PICS', 'https://files.catbox.moe/j3x4b3.jpg https://files.catbox.moe/sqkw2u.jpg https://files.catbox.moe/n2cnyz.jpg')).split()
     name = str(getenv('name', 'Opbackup_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
